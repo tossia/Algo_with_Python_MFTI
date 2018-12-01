@@ -1,11 +1,5 @@
-
 # coding: utf-8
-
-# квадрат
-
-# In[17]:
-
-
+# рисуем квадрат
 import turtle
 
 turtle.shape('turtle')
@@ -13,31 +7,18 @@ for i in range(4):
     turtle.forward(100)
     turtle.right(90)
 
-
-# круги
-
-# In[19]:
-
-
+# рисуем круг
 import turtle
 
 turtle.shape('turtle')
 for i in range(360):
     turtle.forward(1)
     turtle.right(1)
-for i in range(360):
-    turtle.forward(1)
-    turtle.left(1)
 
-
-# 10 вложенных квадратов
-
-# In[1]:
-
-
+# рисуем 10 вложенных квадратов
 import turtle
 
-#turtle.shape('turtle')
+#turtle.shape('turtle') опционально, красиво, но замедляет движение
 n = 0
 r = 0
 for i in range(10):
@@ -52,27 +33,20 @@ for i in range(10):
     r += 10
 
 
-# паук с 12 лапками
-
-# In[1]:
-
-
+# рисуем паука с n лапками
 import turtle
 
 turtle.shape('turtle')
-for i in range(12):
+n = int(input())
+for i in range(n): 
     turtle.forward(200)
     turtle.stamp()
-    turtle.right(180)
+    turtle.right(360 // n)
     turtle.forward(200)
-    turtle.right(150)
+    turtle.right(180 + 360 / n)
 
 
-# спираль
-
-# In[3]:
-
-
+# рисуем спираль
 import turtle
 
 turtle.shape('turtle')
@@ -83,11 +57,7 @@ for i in range(360):
     n += 0.03
 
 
-# квадратная спираль
-
-# In[7]:
-
-
+# рисуем квадратную спираль
 import turtle
 
 turtle.shape('turtle')
@@ -104,48 +74,10 @@ for i in range(10):
     turtle.right(90)
     n += 10
 
-
 # Нарисовать десять встроенных многоугольников через функцию
-
-# In[1]:
-
-
-import turtle
-import math
-turtle.shape('turtle')
-M = 100
-angles = 3
-Nb_figure = 5
-Radius = 0
-Nb = 3
-for j in range(Nb_figure):
-    for i in range(angles):
-        Radius = M / 2 * (math.sin(math.radians(360 / 2 * Nb)))
-        turtle.forward(M)
-        turtle.right(360 // angles)
-        Nb += 1
-    turtle.penup()
-    Radius += 10
-    turtle.goto(Radius, Radius)
-    turtle.pendown()
-    angles +=1
-
-
-# In[ ]:
-
-
-import math
-Rad = math.radians(60)
-print(Rad)
-Radius = 100 / 2 * math.sin(math.radians(60))
-print("Radius", Radius)
 
 
 # Нарисовать цветок из окружностей 6 через функцию
-
-# In[1]:
-
-
 def fleure(n):
     import turtle
     turtle.shape('turtle')
@@ -153,17 +85,13 @@ def fleure(n):
         for i in range(360):
             turtle.forward(1.5)
             turtle.right(1)
-        turtle.left(360 // n)
+        turtle.left(360 / n)
     return n
 n = int(input())
 fleure(n)
 
 
 # Нарисовать бабочку из окружностей через функцию
-
-# In[23]:
-
-
 def papion(Nb_rings):
     import turtle
     R = 10
@@ -171,22 +99,12 @@ def papion(Nb_rings):
     turtle.right(90)
     for i in range(Nb_rings):
         turtle.circle(R)
-
         turtle.circle(-R)
-
         R += 10
 
-papion(int(input()))
-
-
-    
-
+papion(int(input())   
 
 # нарисовать пружину через функцию
-
-# In[3]:
-
-
 def spiral(Nb_turns):
     import turtle
     Big_turn = 0.5
@@ -206,12 +124,6 @@ spiral(int(input()))
 
 
 # Нарисуйте смайлик с помощью написанных функций рисования круга и дуги.
-
-# In[15]:
-
-
-import turtle
-
 import turtle
 
 turtle.begin_fill()
@@ -253,9 +165,4 @@ turtle.goto(-100, 0)
 
 
 # Нарисуйте две звезды: одну с 5 вершинами, другую — с 11. Используйте функцию, рисующую звезду с n вершинами. 
-
-# In[18]:
-
-
-turtle.reset()
 
