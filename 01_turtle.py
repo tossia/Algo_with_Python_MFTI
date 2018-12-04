@@ -75,7 +75,29 @@ for i in range(10):
     n += 10
 
 # Нарисовать десять встроенных многоугольников через функцию
+def poligon(n, rebro):
+    import math
+    import turtle
 
+    turtle.left(90 / n)
+    Radius = rebro / (2 * (math.sin(math.pi / n)))
+    step = 0
+    for i in range(10):
+        for j in range(n):
+            turtle.forward(rebro)
+            turtle.right(360 / n)
+        turtle.up()
+        step -= 20
+        turtle.goto(step, 0)
+        turtle.down()
+        n += 1
+        rebro = 2 * (Radius + abs(step)) * math.sin(math.pi / n) 
+        turtle.left(180 / (n - 1) - 180 / n)
+    return n, rebro
+
+n = 3
+rebro = 50
+poligon(n, rebro)
 
 # Нарисовать цветок из окружностей 6 через функцию
 def fleure(n):
@@ -165,4 +187,13 @@ turtle.goto(-100, 0)
 
 
 # Нарисуйте две звезды: одну с 5 вершинами, другую — с 11. Используйте функцию, рисующую звезду с n вершинами. 
+def star_5(n):
+    import turtle
+    N = 200
+    for i in range(n):
+        turtle.forward(N)
+        turtle.right(180  + 180 / 5)
+    return n
+n = 5
+star_5(n)
 
