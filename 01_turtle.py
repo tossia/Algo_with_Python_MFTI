@@ -1,5 +1,5 @@
 # coding: utf-8
-# рисуем квадрат
+# draw a square
 import turtle
 
 turtle.shape('turtle')
@@ -7,7 +7,7 @@ for i in range(4):
     turtle.forward(100)
     turtle.right(90)
 
-# рисуем круг
+# draw a circle
 import turtle
 
 turtle.shape('turtle')
@@ -15,10 +15,10 @@ for i in range(360):
     turtle.forward(1)
     turtle.right(1)
 
-# рисуем 10 вложенных квадратов
+# draw 10 inserted squares
 import turtle
 
-#turtle.shape('turtle') опционально, красиво, но замедляет движение
+#turtle.shape('turtle') option, but making the movement slow
 n = 0
 r = 0
 for i in range(10):
@@ -33,7 +33,7 @@ for i in range(10):
     r += 10
 
 
-# рисуем паука с n лапками
+# draw a spider with n foots
 import turtle
 
 turtle.shape('turtle')
@@ -46,7 +46,7 @@ for i in range(n):
     turtle.right(180 + 360 / n)
 
 
-# рисуем спираль
+# draw a spiral
 import turtle
 
 turtle.shape('turtle')
@@ -57,7 +57,7 @@ for i in range(360):
     n += 0.03
 
 
-# рисуем квадратную спираль
+# draw a square spiral
 import turtle
 
 turtle.shape('turtle')
@@ -74,7 +74,7 @@ for i in range(10):
     turtle.right(90)
     n += 10
 
-# Нарисовать десять встроенных многоугольников через функцию
+# draw 10 inserted polygons
 def poligon(n, rebro):
     import math
     import turtle
@@ -99,7 +99,7 @@ n = 3
 rebro = 50
 poligon(n, rebro)
 
-# Нарисовать цветок из окружностей 6 через функцию
+# draw a flour by circles 
 def fleure(n):
     import turtle
     turtle.shape('turtle')
@@ -113,7 +113,7 @@ n = int(input())
 fleure(n)
 
 
-# Нарисовать бабочку из окружностей через функцию
+# draw a buterfly by circles
 def papion(Nb_rings):
     import turtle
     R = 10
@@ -126,7 +126,7 @@ def papion(Nb_rings):
 
 papion(int(input())   
 
-# нарисовать пружину через функцию
+# draw a spring
 def spiral(Nb_turns):
     import turtle
     Big_turn = 0.5
@@ -145,7 +145,7 @@ def spiral(Nb_turns):
 spiral(int(input()))            
 
 
-# Нарисуйте смайлик с помощью написанных функций рисования круга и дуги.
+# draw a nice smile 
 import turtle
 
 turtle.begin_fill()
@@ -186,7 +186,7 @@ turtle.up()
 turtle.goto(-100, 0)
 
 
-# Нарисуйте две звезды: одну с 5 вершинами, другую — с 11. Используйте функцию, рисующую звезду с n вершинами. 
+# Draw a star 
 def star_5(n):
     import turtle
     N = 200
